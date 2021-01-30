@@ -35,12 +35,28 @@ section:not(.introduction) {
 section.bears > p {
   margin-bottom: 1cm;
 }
-img {
-  border: dashed black 1.5px;
-  align-content: center;
-  margin-bottom: 0.5cm;
-}xxxxx
+.bears > .image-container > img:first-of-type {
+  border: 2px solid rgb(108, 99, 190);
+  
+  margin-bottom: 0.7cm;
+}
 
+.bears > .image-container > img:nth-of-type(2) {
+  border: 2px dashed rgb(65, 42, 199);
+  
+  margin-bottom: 0.7cm;
+} 
+
+.bears .image-container > img:last-of-type {
+  border: double rgb(75, 177, 105) 2px;
+  
+  margin-bottom: 0.7cm;
+}
+.image-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
 
 nav {
   display: inline-block;
@@ -63,11 +79,11 @@ section {
   margin-bottom: 1cm;
 }
 
-.image-container img {
-  vertical-align: top;
+
+/* News 4) */
+.news {
   text-align: center;
-  border: 5px solid #747c92;
-}xxxxxxx
+}
 
 h1,
 h2,
@@ -118,7 +134,7 @@ footer {
   border-radius: 50%;
   display: inline-block;
   position: fixed;
-  bottom: 20px;
+  top: 20px;
   right: 20px;
 
   display: flex;
@@ -138,9 +154,7 @@ footer {
 
 
 
-.image-container img:first-of-type {
-  vertical-align: bottom;
-}
+
 
 .tigers {
   background-color: #56a5bb;
@@ -199,11 +213,16 @@ footer {
   background-color: rgba(255, 255, 255, 0.75);
   padding: 50px;
   max-width: 400px;
+  border-radius: 5px;
 }
 
 .education-container h3,
 .education-container p {
   margin-bottom: 1em;
+}
+.education-container button:hover {
+  background-color: red;
+  font-size: 1em;
 }
 
 /*Membership*/
@@ -217,6 +236,11 @@ footer {
   color: #ff3f00;
 }
 
+.membership p {
+  max-width: 700px;
+  margin: auto;
+}
+
 .membership strong {
   color: #ff7f11;
 }
@@ -224,5 +248,18 @@ footer {
 /*Programs*/
 
 .programs .card {
-  display: block;
+  display: inline-block;
+  width: 20%;
+}
+
+.programs .card:nth-of-type(1) button  {
+  background-color: cadetblue;
+}
+
+.programs .card:nth-of-type(2) button  {
+  background-color: rgb(97, 177, 101);
+}
+
+.programs .card:nth-of-type(3) button  {
+  background-color: rgb(223, 113, 132);
 }
